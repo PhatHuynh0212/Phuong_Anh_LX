@@ -1,8 +1,16 @@
 import { AlignJustify, ShoppingCart, User } from "lucide-react";
 import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
+import CartDrawer from "../Layout/CartDrawer";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [openDrawer, setOpenDrawer] = useState(false);
+
+  const toggleCartDrawer = () => {
+    setOpenDrawer(!openDrawer);
+  };
+
   return (
     <>
       <nav className="container mx-auto flex items-center justify-between px-6 py-4">
@@ -46,7 +54,10 @@ const Navbar = () => {
           <Link to="profile">
             <User className="size-6 text-gray-700 hover:text-black" />
           </Link>
-          <button className="relative hover:text-black">
+          <button
+            onClick={toggleCartDrawer}
+            className="relative hover:text-black"
+          >
             <ShoppingCart className="size-6 text-gray-700 hover:text-black" />
             <span className="absolute -top-3 bg-pa-red text-white text-xs px-2 py-1 rounded-full">
               2
@@ -61,6 +72,8 @@ const Navbar = () => {
           </button>
         </div>
       </nav>
+      {/* Cart Drawer */}
+      <CartDrawer openDrawer={openDrawer} toggleCartDrawer={toggleCartDrawer} />
     </>
   );
 };
