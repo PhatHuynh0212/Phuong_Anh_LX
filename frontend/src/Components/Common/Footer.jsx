@@ -1,4 +1,4 @@
-import { Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -66,13 +66,21 @@ const Footer = () => {
             <h3 className="text-lg text-gray-800 mb-4">Hỗ trợ</h3>
             <ul className="space-y-2 text-gray-600">
               <li>
-                <Link to="#" className="hover:text-gray-500 transition-colors">
-                  Liên hệ chúng tôi
+                <Link
+                  to="#"
+                  className="hover:text-gray-500 transition-colors text-sm"
+                >
+                  <Mail className="size-5 inline-block" />{" "}
+                  phuonganhlx.com@gmail.com
                 </Link>
               </li>
               <li>
-                <Link to="#" className="hover:text-gray-500 transition-colors">
-                  Địa chỉ
+                <Link
+                  to="#"
+                  className="hover:text-gray-500 transition-colors text-sm"
+                >
+                  <MapPin className="size-5 inline-block" /> 445 Trần Hưng Đạo,
+                  Bình Khánh, Tp.Long Xuyên, An Giang
                 </Link>
               </li>
             </ul>
