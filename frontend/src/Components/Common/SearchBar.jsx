@@ -20,7 +20,7 @@ const SearchBar = () => {
     <div
       className={`flex items-center justify-center w-full transition-all duration-300 ${
         isOpen
-          ? "absolute top-0 left-0 w-full bg-white h-[102px] z-50 animate-slideDown"
+          ? "absolute top-0 left-0 w-full bg-white h-[110px] md:h-[130px] z-50 animate-slideDown"
           : "w-auto"
       }`}
     >

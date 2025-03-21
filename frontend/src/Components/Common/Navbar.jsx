@@ -18,11 +18,15 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="container mx-auto flex items-center justify-between px-6 py-4">
+      <nav className="container mx-auto flex items-center justify-between px-6 sm:px-4 py-2">
         {/* Left logo */}
         <div>
           <Link to="#" className="text-2xl font-medium">
-            Phuong Anh
+            <img
+              src="/logo/palx_logo_transparent.png"
+              alt="PA logo"
+              className="h-[65px] w-[90px] object-cover"
+            />
           </Link>
         </div>
 
