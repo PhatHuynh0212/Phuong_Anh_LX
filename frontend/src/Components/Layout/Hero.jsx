@@ -40,42 +40,6 @@ const slides = [
 ];
 
 const Hero = () => {
-  // return (
-  //   <section className="relative">
-  //     <Swiper
-  //       modules={[Autoplay, Pagination, Navigation]}
-  //       loop={true}
-  //       autoplay={{ delay: 5000, disableOnInteraction: false }}
-  //       speed={600}
-  //       pagination={{ clickable: true }}
-  //       navigation
-  //       className="w-full h-[400px] md:h-[580px]"
-  //     >
-  //       {slides.map((slide, index) => (
-  //         <SwiperSlide key={index} className="relative">
-  //           <img
-  //             src={slide.image}
-  //             alt={`Slide ${index + 1}`}
-  //             className="w-full h-full object-cover"
-  //             loading="lazy"
-  //           />
-  //           {/* Check desc */}
-  //           {slide.title && slide.subtitle && (
-  //             <div className="absolute bottom-10 left-20 bg-white/70 p-5 rounded-lg shadow-md max-w-[">
-  //               <h3 className="text-blue-600 text-[35px] font-semibold">
-  //                 {slide.title}
-  //               </h3>
-  //               <h2 className="text-blue-800 text-[50px] font-bold uppercase whitespace-pre-line">
-  //                 {slide.subtitle}
-  //               </h2>
-  //             </div>
-  //           )}
-  //         </SwiperSlide>
-  //       ))}
-  //     </Swiper>
-  //   </section>
-  // );
-
   return (
     <section className="relative">
       <Swiper
