@@ -1,5 +1,6 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
+import dathongbao from "../../assets/dathongbao.png";
 
 const Footer = () => {
   return (
@@ -101,7 +102,7 @@ const Footer = () => {
 
         {/* Follow us */}
         <div>
-          <h3 className="text-lg text-gray-800 mb-4">Mạng xã hội</h3>
+          <h3 className="text-lg text-gray-800 mb-4">Theo dõi qua</h3>
           <div className="flex items-center space-x-4 mb-5">
             <a
               href="https://www.facebook.com/phuonganhlx"
@@ -200,6 +201,9 @@ const Footer = () => {
               <Phone className="size-4 inline-block mr-2" />
               0855-833-833
             </p>
+          </div>
+          <div className="mt-3">
+            <img src={dathongbao} alt="da_thong_bao" className="h-14" />
           </div>
         </div>
       </div>
