@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import haiau from "../../assets/haiau.png";
 import toast from "react-hot-toast";
+import ProductGrid from "./ProductGrid";
+import { convertPrice } from "../../utils";
 
 const selectedProduct = {
   name: "Sơn Epoxy Hải Âu",
@@ -14,15 +15,58 @@ const selectedProduct = {
   colors: ["Blue", "Green"],
   images: [
     {
-      url: haiau,
+      url: "https://picsum.photos/200/300?random=1",
       altText: "Sơn Hải Âu",
     },
     {
-      url: "https://images.unsplash.com/photo-1741986947217-d1a0ecc39149?q=80&w=2066&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      url: "https://picsum.photos/200/300?random=2",
       altText: "Sơn Hải Âu",
     },
   ],
 };
+
+const similarProducts = [
+  {
+    _id: 1,
+    name: "Product 1",
+    price: 100000,
+    image: [
+      {
+        url: "https://picsum.photos/200/300?random=3",
+      },
+    ],
+  },
+  {
+    _id: 2,
+    name: "Product 1",
+    price: 100000,
+    image: [
+      {
+        url: "https://picsum.photos/200/300?random=4",
+      },
+    ],
+  },
+  {
+    _id: 3,
+    name: "Product 1",
+    price: 100000,
+    image: [
+      {
+        url: "https://picsum.photos/200/300?random=5",
+      },
+    ],
+  },
+  {
+    _id: 4,
+    name: "Product 1",
+    price: 100000,
+    image: [
+      {
+        url: "https://picsum.photos/200/300?random=6",
+      },
+    ],
+  },
+];
 
 const ProductDetails = () => {
   const [mainImage, setMainImage] = useState("");
@@ -108,10 +152,10 @@ const ProductDetails = () => {
             </h1>
             <p className="text-lg tt-gray-600 mb-1 line-through">
               {selectedProduct.originalPrice &&
-                `${selectedProduct.originalPrice}đ`}
+                `${convertPrice(selectedProduct.originalPrice)}`}
             </p>
             <p className="text-xl text-gray-500 mb-2">
-              {selectedProduct.price}đ
+              {convertPrice(selectedProduct.price)}
             </p>
             <p className="text-gray-600 mb-4">{selectedProduct.description}</p>
 
@@ -184,6 +228,12 @@ const ProductDetails = () => {
               {isButtonDisable ? "Đang thêm..." : "THÊM VÀO GIỎ"}
             </button>
           </div>
+        </div>
+        <div className="mt-20">
+          <h2 className="text-2xl text-center font-semibold mb-4">
+            Các sản phẩm liên quan
+          </h2>
+          <ProductGrid products={similarProducts} />
         </div>
       </div>
     </div>

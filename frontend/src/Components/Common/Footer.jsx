@@ -5,9 +5,9 @@ import dathongbao from "../../assets/dathongbao.png";
 const Footer = () => {
   return (
     <footer className="border-t pt-12 pb-6">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4 lg:px-0">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4 lg:px-0">
         {/* Newsletter */}
-        <div>
+        <div className="md:hidden lg:block">
           <h3 className="text-lg text-gray-800 mb-4">Bản tin</h3>
           <p className="text-gray-500 mb-4">
             Hãy trở thành người đầu tiên biết về các sản phẩm mới và ưu đãi trực
@@ -34,29 +34,27 @@ const Footer = () => {
           </form>
         </div>
 
-        {/* Store links */}
+        {/* Working timeline */}
         <div>
-          <h3 className="text-lg text-gray-800 mb-4">Cửa hàng</h3>
+          <h3 className="text-lg text-gray-800 mb-4">Thời gian làm việc</h3>
           <ul className="space-y-2 text-gray-600">
             <li>
-              <Link to="#" className="hover:text-gray-500 transition-colors">
-                Hải Âu
-              </Link>
+              <span>Thứ 2: 7:30am ~ 4:00pm</span>
             </li>
             <li>
-              <Link to="#" className="hover:text-gray-500 transition-colors">
-                Jotun
-              </Link>
+              <span>Thứ 3: 7:30am ~ 4:00pm</span>
             </li>
             <li>
-              <Link to="#" className="hover:text-gray-500 transition-colors">
-                Nippon
-              </Link>
+              <span>Thứ 4: 7:30am ~ 4:00pm</span>
             </li>
             <li>
-              <Link to="#" className="hover:text-gray-500 transition-colors">
-                Thế Hệ Mới
-              </Link>
+              <span>Thứ 5: 7:30am ~ 4:00pm</span>
+            </li>
+            <li>
+              <span>Thứ 6: 7:30am ~ 4:00pm</span>
+            </li>
+            <li>
+              <span>Thứ 7: 7:30am ~ 4:00pm</span>
             </li>
           </ul>
         </div>

@@ -1,6 +1,7 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { convertPrice } from "../../utils.js";
 
 const NewArrivals = () => {
   const scrollRef = useRef(null);
@@ -14,7 +15,7 @@ const NewArrivals = () => {
     {
       _id: "1",
       name: "Jotun",
-      price: 120,
+      price: 120000,
       images: [
         {
           url: "https://picsum.photos/500/500?random=1",
@@ -25,7 +26,7 @@ const NewArrivals = () => {
     {
       _id: "2",
       name: "Jotun",
-      price: 120,
+      price: 120000,
       images: [
         {
           url: "https://picsum.photos/500/500?random=2",
@@ -36,7 +37,7 @@ const NewArrivals = () => {
     {
       _id: "3",
       name: "Jotun",
-      price: 120,
+      price: 120000,
       images: [
         {
           url: "https://picsum.photos/500/500?random=3",
@@ -47,7 +48,7 @@ const NewArrivals = () => {
     {
       _id: "4",
       name: "Jotun",
-      price: 120,
+      price: 120000,
       images: [
         {
           url: "https://picsum.photos/500/500?random=4",
@@ -58,7 +59,7 @@ const NewArrivals = () => {
     {
       _id: "5",
       name: "Jotun",
-      price: 120,
+      price: 120000,
       images: [
         {
           url: "https://picsum.photos/500/500?random=5",
@@ -69,7 +70,7 @@ const NewArrivals = () => {
     {
       _id: "6",
       name: "Jotun",
-      price: 120,
+      price: 120000,
       images: [
         {
           url: "https://picsum.photos/500/500?random=6",
@@ -185,7 +186,7 @@ const NewArrivals = () => {
             <div className="absolute bottom-0 left-0 right-0 bg-opacity-50 backdrop-blur-md text-white p-4 rounded-b-lg ">
               <Link to={`/product/${product._id}`} className="block">
                 <h4 className="font-medium mb-1">{product.name}</h4>
-                <p>{product.price}đ</p>
+                <p>{convertPrice(product.price)}</p>
               </Link>
             </div>
           </div>
