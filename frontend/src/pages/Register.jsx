@@ -14,7 +14,7 @@ const Register = () => {
   };
 
   return (
-    <div className="flex w-full w-1/2 justify-center items-center p-8 md:p-12 mx-auto">
+    <div className="flex w-full justify-center items-center p-8 md:p-12 mx-auto">
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-md bg-white p-8 rounded-lg border shadow-sm"
@@ -23,8 +23,8 @@ const Register = () => {
           <h2 className="text-xl font-medium">Phương Anh LX</h2>
         </div>
         <h2 className="text-2xl font-bold text-center mb-6">Xin chào! 👋</h2>
-        <p className="text-center mb-6">
-          Nhập tài khoản và mật khẩu để đăng nhập
+        <p className="text-center mb-6 text-sm sm:text-base">
+          Nhập đầy đủ thông tin đăng ký
         </p>
         <div className="mb-4">
           <label className="block text-sm font-semibold mb-2">Name *</label>

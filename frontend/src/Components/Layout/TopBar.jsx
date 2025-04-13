@@ -32,10 +32,10 @@ const TopBar = () => {
         </div>
         <div className="hidden md:flex text-sm flex-col">
           <a href="tel:+84946464672" className="hover:text-gray-300">
-            +84 946 46 46 72
+            0946 46 46 72
           </a>
           <a href="tel:+84855833833" className="hover:text-gray-300">
-            +84 855 833 833
+            0855 833 833
           </a>
         </div>
       </div>

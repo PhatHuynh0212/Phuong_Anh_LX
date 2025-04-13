@@ -21,7 +21,7 @@ const Navbar = () => {
       <nav className="container mx-auto flex items-center justify-between px-6 sm:px-4 py-2">
         {/* Left logo */}
         <div>
-          <Link to="#" className="text-2xl font-medium">
+          <Link to="/" className="text-2xl font-medium">
             <img
               src="/logo/palx_logo_transparent.png"
               alt="PA logo"
@@ -55,6 +55,12 @@ const Navbar = () => {
             className="text-gray-700 hover:text-black text-sm font-medium uppercase"
           >
             Thế Hệ Mới
+          </Link>
+          <Link
+            to="#"
+            className="text-gray-700 hover:text-black text-sm font-medium uppercase"
+          >
+            Sản Phẩm Khác
           </Link>
         </div>
 

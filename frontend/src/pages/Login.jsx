@@ -13,7 +13,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex w-full w-1/2 justify-center items-center p-8 md:p-12 mx-auto">
+    <div className="flex w-full justify-center items-center p-8 md:p-12 mx-auto">
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-md bg-white p-8 rounded-lg border shadow-sm"
@@ -22,7 +22,7 @@ const Login = () => {
           <h2 className="text-xl font-medium">Phương Anh LX</h2>
         </div>
         <h2 className="text-2xl font-bold text-center mb-6">Xin chào! 👋</h2>
-        <p className="text-center mb-6">
+        <p className="text-center mb-6 text-sm sm:text-base">
           Nhập tài khoản và mật khẩu để đăng nhập
         </p>
         <div className="mb-4">
