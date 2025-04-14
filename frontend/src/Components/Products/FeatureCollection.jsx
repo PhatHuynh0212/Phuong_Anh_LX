@@ -7,10 +7,10 @@ const FeatureCollection = () => {
       <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center bg-green-50 rounded-3xl">
         {/* Left content */}
         <div className="lg:w-1/2 p-8 text-center lg:text-left">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-3xl lg:text-5xl font-bold mb-6">
             Chào mừng đến với Phương Anh Long Xuyên
           </h2>
-          <p className="text-lg text-gray-600 mb-6 text-justify">
+          <p className="lg:text-lg text-gray-600 mb-6 text-justify">
             Đại lý nước sơn Phương Anh – Long Xuyên. Được sáng lập bởi hai vợ
             chồng Huỳnh Văn Hiền và Nguyễn Thị Thủy Ngân – những người từng gắn
             bó với nghề đi sà lan, đại lý ra đời từ khát vọng vươn lên và làm
@@ -37,7 +37,7 @@ const FeatureCollection = () => {
           <img
             src={feature}
             alt="CEO PALX"
-            className="w-full h-full object-cover sm:rounded-tl-3xl sm:rounded-tr-3xl lg:sm:rounded-none lg:rounded-tr-3xl lg:rounded-br-3xl"
+            className="w-full h-full object-cover rounded-tl-3xl rounded-tr-3xl lg:sm:rounded-none lg:rounded-tr-3xl lg:rounded-br-3xl"
           />
         </div>
       </div>

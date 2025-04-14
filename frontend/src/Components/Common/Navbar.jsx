@@ -33,31 +33,31 @@ const Navbar = () => {
         {/* Center Navigation Link */}
         <div className="hidden md:flex space-x-6 items-center justify-between">
           <Link
-            to="#"
+            to="/collections/all?brand=hai-au"
             className="text-gray-700 hover:text-black text-sm font-medium uppercase"
           >
             Hải Âu
           </Link>
           <Link
-            to="#"
+            to="/collections/all?brand=jotun"
             className="text-gray-700 hover:text-black text-sm font-medium uppercase"
           >
             Jotun
           </Link>
           <Link
-            to="#"
+            to="/collections/all?brand=nippon"
             className="text-gray-700 hover:text-black text-sm font-medium uppercase"
           >
             Nippon
           </Link>
           <Link
-            to="#"
+            to="/collections/all?brand=the-he-moi"
             className="text-gray-700 hover:text-black text-sm font-medium uppercase"
           >
             Thế Hệ Mới
           </Link>
           <Link
-            to="#"
+            to="/collections/all?brand=san-pham-khac"
             className="text-gray-700 hover:text-black text-sm font-medium uppercase"
           >
             Sản Phẩm Khác
