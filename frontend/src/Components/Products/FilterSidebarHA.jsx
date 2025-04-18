@@ -1,6 +1,7 @@
 import { PaintBucket, X } from "lucide-react";
 import { useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import { toParamFormat } from "../../utils";
 import ReactDOM from "react-dom";
 import bang_mau_1 from "../../assets/color/haiau/mau-haiau-cn_tt.jpg";
 import bang_mau_2 from "../../assets/color/haiau/mau-haiau-noith.svg";
@@ -14,8 +15,7 @@ const productFilters = [
       "Sơn Epoxy",
       "Sơn cao su Clo hoá",
       "Sơn chống hà",
-      "Sơn shopprimer",
-      "Sơn Polyurethen",
+      "Sơn PU",
     ],
   },
   {
@@ -26,7 +26,7 @@ const productFilters = [
       "Sơn bê tông",
       "Sơn Epoxy",
       "Sơn Acrylic",
-      "Sơn Polyurethen",
+      "Sơn PU",
     ],
   },
   {
@@ -40,26 +40,13 @@ const productFilters = [
   },
   {
     category: "Sơn đặc biệt",
-    types: ["Sơn Chịu nhiệt", "Sơn Polyurethen"],
+    types: ["Sơn chịu nhiệt", "Sơn PU"],
   },
   {
     category: "Dung môi pha sơn",
-    types: [
-      "Dung môi sơn Epoxy",
-      "Dung môi sơn Cao su clo hoá",
-      "Dung môi sơn Alkyd",
-      "Dung môi sơn PU",
-    ],
+    types: ["Epoxy", "Cao su clo hoá", "Alkyd", "PU"],
   },
 ];
-
-// Convert string to kebab-case, không dấu
-const toParamFormat = (str) =>
-  str
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "") // loại bỏ dấu
-    .toLowerCase()
-    .replace(/\s+/g, "-");
 
 const FilterSidebar = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -104,74 +91,76 @@ const FilterSidebar = () => {
 
   // Modal Content
   const modalContent = (
-    <div className="fixed inset-0 flex items-center justify-center z-50">
-      {/* Overlay: bấm vào đây để đóng modal */}
-      <div
-        className="absolute inset-0 bg-black opacity-60 transition duration-300"
-        onClick={toggleModal}
-      ></div>
-      {/* Nội dung Modal */}
-      <div className="relative bg-white p-8 rounded-lg shadow-2xl w-11/12 max-w-[830px] transform transition-all duration-300">
-        {/* Nút đóng modal */}
-        <button
-          className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
+    <div className="fixed inset-0 z-50 overflow-y-auto">
+      <div className="flex min-h-screen items-center justify-center p-4">
+        {/* Overlay: bấm vào đây để đóng modal */}
+        <div
+          className="absolute inset-0 bg-black opacity-60 transition duration-300"
           onClick={toggleModal}
-        >
-          <X size={24} />
-        </button>
-        {/* Nội dung modal */}
-        <div className="flex flex-col md:flex-row">
-          {/* Phần lựa chọn bảng màu */}
-          <div className="md:w-1/2 md:mr-4 border-r border-gray-200 pr-4">
-            <h3 className="font-semibold text-lg mb-4 uppercase text-gray-800">
-              Chọn bảng màu
-            </h3>
-            <div className="space-y-2">
-              <p
-                onClick={() => setSelectedColor(1)}
-                className={`cursor-pointer px-3 py-2 rounded transition duration-200 ${
-                  selectedColor === 1
-                    ? "bg-blue-100 text-blue-600 font-bold"
-                    : "text-gray-700 hover:bg-blue-50"
-                }`}
-              >
-                Màu cơ bản sơn công nghiệp - tàu thuỷ
-              </p>
-              <p
-                onClick={() => setSelectedColor(2)}
-                className={`cursor-pointer px-3 py-2 rounded transition duration-200 ${
-                  selectedColor === 2
-                    ? "bg-blue-100 text-blue-600 font-bold"
-                    : "text-gray-700 hover:bg-blue-50"
-                }`}
-              >
-                Màu cơ bản sơn nước nội thất
-              </p>
-              <p
-                onClick={() => setSelectedColor(3)}
-                className={`cursor-pointer px-3 py-2 rounded transition duration-200 ${
-                  selectedColor === 3
-                    ? "bg-blue-100 text-blue-600 font-bold"
-                    : "text-gray-700 hover:bg-blue-50"
-                }`}
-              >
-                Màu cơ bản sơn nước ngoại thất
-              </p>
+        ></div>
+        {/* Nội dung Modal */}
+        <div className="relative bg-white p-8 rounded-lg shadow-2xl w-11/12 max-w-[830px] transform transition-all duration-300">
+          {/* Nút đóng modal */}
+          <button
+            className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
+            onClick={toggleModal}
+          >
+            <X size={24} />
+          </button>
+          {/* Nội dung modal */}
+          <div className="flex flex-col md:flex-row">
+            {/* Phần lựa chọn bảng màu */}
+            <div className="md:w-1/2 md:mr-4 sm:border-r border-gray-200 pr-4">
+              <h3 className="font-semibold text-lg mb-4 uppercase text-gray-800">
+                Chọn bảng màu
+              </h3>
+              <div className="space-y-2">
+                <p
+                  onClick={() => setSelectedColor(1)}
+                  className={`cursor-pointer px-3 py-2 rounded transition duration-200 ${
+                    selectedColor === 1
+                      ? "bg-blue-100 text-blue-600 font-bold"
+                      : "text-gray-700 hover:bg-blue-50"
+                  }`}
+                >
+                  Màu cơ bản sơn công nghiệp - tàu thuỷ
+                </p>
+                <p
+                  onClick={() => setSelectedColor(2)}
+                  className={`cursor-pointer px-3 py-2 rounded transition duration-200 ${
+                    selectedColor === 2
+                      ? "bg-blue-100 text-blue-600 font-bold"
+                      : "text-gray-700 hover:bg-blue-50"
+                  }`}
+                >
+                  Màu cơ bản sơn nước nội thất
+                </p>
+                <p
+                  onClick={() => setSelectedColor(3)}
+                  className={`cursor-pointer px-3 py-2 rounded transition duration-200 ${
+                    selectedColor === 3
+                      ? "bg-blue-100 text-blue-600 font-bold"
+                      : "text-gray-700 hover:bg-blue-50"
+                  }`}
+                >
+                  Màu cơ bản sơn nước ngoại thất
+                </p>
+              </div>
             </div>
-          </div>
-          {/* Phần hiển thị hình ảnh bảng màu */}
-          <div className="md:w-1/2 mt-6 md:mt-0">
-            <img
-              src={
-                selectedColor === 1
-                  ? bang_mau_1
-                  : selectedColor === 2
-                  ? bang_mau_2
-                  : bang_mau_3
-              }
-              alt="Bảng màu"
-              className="w-full h-auto"
-            />
+            {/* Phần hiển thị hình ảnh bảng màu */}
+            <div className="md:w-1/2 mt-6 md:mt-0">
+              <img
+                src={
+                  selectedColor === 1
+                    ? bang_mau_1
+                    : selectedColor === 2
+                    ? bang_mau_2
+                    : bang_mau_3
+                }
+                alt="Bảng màu"
+                className="w-full h-auto"
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 import { convertPrice } from "../../utils";
 
-const ProductGrid = ({ products }) => {
+const ProductGrid = ({ products, height }) => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div
+      className={`${
+        height ? `h-[${height}]` : ""
+      } grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 overflow-y-auto`}
+    >
       {products?.map((product, index) => (
         <Link key={index} to={`/product/${product._id}`} className="block">
           <div className="bg-white p-4 rounded-lg">
