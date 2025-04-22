@@ -3,7 +3,7 @@ import { Minus, Plus, Trash2 } from "lucide-react";
 const CartContents = () => {
   const cartProducts = [
     {
-      productID: 1,
+      productId: 1,
       name: "Jotun",
       size: "Lớn",
       color: "Đỏ",
@@ -12,7 +12,7 @@ const CartContents = () => {
       image: "https://picsum.photos/200?random=1",
     },
     {
-      productID: 2,
+      productId: 2,
       name: "Hải Âu",
       size: "Nhỏ",
       color: "Xanh",
@@ -38,7 +38,7 @@ const CartContents = () => {
             <div>
               <h3 className="">{product.name}</h3>
               <p className="text-xs md:text-base text-gray-500">
-                Kích cỡ: {product.size} | Màu: {product.color}
+                Thể tich: {product.size} | Màu: {product.color}
               </p>
               <div className="flex items-center mt-2">
                 <button className="border rounded px-2 py-2 text-xl font-medium">

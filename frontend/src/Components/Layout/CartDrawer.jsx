@@ -1,7 +1,14 @@
 import { X } from "lucide-react";
 import CartContents from "../Cart/CartContents";
+import { useNavigate } from "react-router-dom";
 
 const CartDrawer = ({ openDrawer, toggleCartDrawer }) => {
+  const navigate = useNavigate();
+  const handleCheckout = () => {
+    toggleCartDrawer();
+    navigate("/checkout");
+  };
+
   return (
     <div
       className={`fixed top-0 right-0 w-3/4 sm:w-1/2 md:w-[28rem] h-full bg-white shadow-lg transform transition-transform duration-300 flex flex-col z-50 ${
@@ -24,7 +31,10 @@ const CartDrawer = ({ openDrawer, toggleCartDrawer }) => {
 
       {/* Checkout Button */}
       <div className="sticky p-4 bg-white bottom-0">
-        <button className="w-full bg-black text-white py-3 rounded-lg font-semibold hover:bg-gray-800">
+        <button
+          onClick={handleCheckout}
+          className="w-full bg-black text-white py-3 rounded-lg font-semibold hover:bg-gray-800"
+        >
           Thanh toán
         </button>
       </div>

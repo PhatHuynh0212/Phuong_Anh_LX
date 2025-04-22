@@ -80,7 +80,7 @@ const MyOrderPage = () => {
                     #{order._id}
                   </td>
                   <td className="px-2 py-2 sm:px-4 sx:py-4">
-                    {new Date(order.createAt).toLocaleDateString()}
+                    {new Date(order.createAt).toLocaleDateString("vi-VN")}
                   </td>
                   <td className="px-2 py-2 sm:px-4 sx:py-4">
                     {order.shippingAddress

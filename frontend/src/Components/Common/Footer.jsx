@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import dathongbao from "../../assets/dathongbao.png";
 
 const Footer = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <footer className="border-t pt-12 pb-6">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4 lg:px-0">
@@ -18,7 +22,7 @@ const Footer = () => {
           </p>
 
           {/* Newsletter form */}
-          <form className="flex">
+          <form className="flex" onSubmit={handleSubmit}>
             <input
               type="email"
               placeholder="Nhập email"
