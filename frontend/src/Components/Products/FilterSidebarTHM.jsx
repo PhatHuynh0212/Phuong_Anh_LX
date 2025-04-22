@@ -3,9 +3,8 @@ import { useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { toParamFormat } from "../../utils";
 import ReactDOM from "react-dom";
-import bang_mau_1 from "../../assets/color/haiau/mau-haiau-cn_tt.jpg";
-import bang_mau_2 from "../../assets/color/haiau/mau-haiau-noith.svg";
-import bang_mau_3 from "../../assets/color/haiau/mau-haiau-ngth.svg";
+import bang_mau_1 from "../../assets/color/thehemoi/mau-thm.png";
+import bang_mau_2 from "../../assets/color/thehemoi/epoxy-thm.png";
 
 const productFilters = [
   {
@@ -111,7 +110,7 @@ const FilterSidebarTHM = () => {
           onClick={toggleModal}
         ></div>
         {/* Nội dung Modal */}
-        <div className="relative bg-white p-8 rounded-lg shadow-2xl w-11/12 max-w-[830px] transform transition-all duration-300">
+        <div className="relative bg-white p-8 rounded-lg shadow-2xl w-11/12 max-w-[1300px] transform transition-all duration-300">
           {/* Nút đóng modal */}
           <button
             className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
@@ -122,7 +121,7 @@ const FilterSidebarTHM = () => {
           {/* Nội dung modal */}
           <div className="flex flex-col md:flex-row">
             {/* Phần lựa chọn bảng màu */}
-            <div className="md:w-1/2 md:mr-4 sm:border-r border-gray-200 pr-4">
+            <div className="md:w-1/3 md:mr-4 sm:border-r border-gray-200 pr-4">
               <h3 className="font-semibold text-lg mb-4 uppercase text-gray-800">
                 Chọn bảng màu
               </h3>
@@ -135,7 +134,7 @@ const FilterSidebarTHM = () => {
                       : "text-gray-700 hover:bg-blue-50"
                   }`}
                 >
-                  Màu cơ bản sơn công nghiệp - tàu thuỷ
+                  Màu sơn tàu và sơn công nghiệp
                 </p>
                 <p
                   onClick={() => setSelectedColor(2)}
@@ -145,30 +144,14 @@ const FilterSidebarTHM = () => {
                       : "text-gray-700 hover:bg-blue-50"
                   }`}
                 >
-                  Màu cơ bản sơn nước nội thất
-                </p>
-                <p
-                  onClick={() => setSelectedColor(3)}
-                  className={`cursor-pointer px-3 py-2 rounded transition duration-200 ${
-                    selectedColor === 3
-                      ? "bg-blue-100 text-blue-600 font-bold"
-                      : "text-gray-700 hover:bg-blue-50"
-                  }`}
-                >
-                  Màu cơ bản sơn nước ngoại thất
+                  Màu sơn Epoxy 2in1
                 </p>
               </div>
             </div>
             {/* Phần hiển thị hình ảnh bảng màu */}
-            <div className="md:w-1/2 mt-6 md:mt-0">
+            <div className="md:w-2/3 mt-6 md:mt-0">
               <img
-                src={
-                  selectedColor === 1
-                    ? bang_mau_1
-                    : selectedColor === 2
-                    ? bang_mau_2
-                    : bang_mau_3
-                }
+                src={selectedColor === 1 ? bang_mau_1 : bang_mau_2}
                 alt="Bảng màu"
                 className="w-full h-auto"
               />

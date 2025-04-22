@@ -41,7 +41,7 @@ const GenderCollectionSection = () => {
               Sơn Hải Âu
             </h2>
             <Link
-              to="/collections/all?brand=haiau"
+              to="/collections/all?brand=hai-au"
               className="text-gray-900 underline"
             >
               Xem thêm
@@ -101,7 +101,7 @@ const GenderCollectionSection = () => {
               Sơn Thế Hệ Mới
             </h2>
             <Link
-              to="/collections/all?brand=thehemoi"
+              to="/collections/all?brand=the-he-moi"
               className="text-gray-900 underline"
             >
               Xem thêm

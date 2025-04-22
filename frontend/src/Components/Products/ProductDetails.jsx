@@ -11,7 +11,7 @@ const selectedProduct = {
     "Sơn Epoxy được sản xuất trên cơ sở nhựa Epoxy, bột màu, dung môi hữu cơ, các phụ gia đặc biệt và chất đóng rắn.",
   brand: "Hải Âu",
   material: "Epoxy",
-  size: ["Nhỏ", "Vừa", "Lớn"],
+  size: ["1 lít", "5 lít", "20 lít"],
   colors: ["Blue", "Green"],
   images: [
     {
@@ -181,7 +181,7 @@ const ProductDetails = () => {
             </div>
 
             <div className="mb-4">
-              <p className="text-gray-700 mb-2">Kích cỡ:</p>
+              <p className="text-gray-700 mb-2">Thể tích:</p>
               <div className="flex gap-2">
                 {selectedProduct.size.map((size) => (
                   <button
