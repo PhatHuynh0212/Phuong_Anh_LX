@@ -48,7 +48,7 @@ const Checkout = () => {
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto py-10 px-6 tracking-tighter">
       {/* Left section */}
       <div className="bg-white rounded-lg p-6">
-        <h2 className="text-2xl uppercase mb-6">Thanh toán</h2>
+        <h2 className="text-2xl uppercase mb-6 font-semibold">Thanh toán</h2>
         <form onSubmit={handleCreateCheckout}>
           <h3 className="text-lg mb-4">Thông tin liên lạc</h3>
           <div className="mb-4">
@@ -73,7 +73,7 @@ const Checkout = () => {
                   })
                 }
                 className="w-full p-2 border rounded"
-                required
+                required={true}
               />
             </div>
           </div>

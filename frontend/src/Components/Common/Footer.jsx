@@ -1,8 +1,14 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import dathongbao from "../../assets/dathongbao.png";
+import { useState } from "react";
 
 const Footer = () => {
+  const [isZaloModalOpen, setZaloModalOpen] = useState(false);
+
+  const openZaloModal = () => setZaloModalOpen(true);
+  const closeZaloModal = () => setZaloModalOpen(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
   };
@@ -110,7 +116,6 @@ const Footer = () => {
               href="https://www.facebook.com/phuonganhlx"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-gray-300"
             >
               <img
                 src="/sm_icon/facebook.png"
@@ -118,23 +123,16 @@ const Footer = () => {
                 className="size-7"
               />
             </a>
-            <a
-              href="https://www.instagram.com/phuonganhlongxuyen/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-gray-300"
+            <button
+              onClick={openZaloModal}
+              className="hover:opacity-80 transition"
             >
-              <img
-                src="/sm_icon/instagram.png"
-                alt="instagram"
-                className="size-8"
-              />
-            </a>
+              <img src="/sm_icon/zalo.png" alt="zalo" className="size-10" />
+            </button>
             <a
               href="https://www.tiktok.com/@phuonganhlongxuyen"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-gray-300"
             >
               <img
                 src="/sm_icon/tik-tok.png"
@@ -146,7 +144,6 @@ const Footer = () => {
               href="https://www.youtube.com/@phuonganhlongxuyen"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-gray-300"
             >
               <img
                 src="/sm_icon/youtube.png"
@@ -157,10 +154,20 @@ const Footer = () => {
           </div>
           <div className="flex items-center space-x-5 mb-5">
             <a
+              href="https://www.instagram.com/phuonganhlongxuyen/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/sm_icon/instagram.png"
+                alt="instagram"
+                className="size-8"
+              />
+            </a>
+            <a
               href="https://twitter.com/phuonganh_lx"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-gray-300"
             >
               <img
                 src="/sm_icon/twitter.png"
@@ -172,7 +179,6 @@ const Footer = () => {
               href="https://www.pinterest.com/phuonganhlongxuyen/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-gray-300"
             >
               <img
                 src="/sm_icon/pinterest.png"
@@ -184,7 +190,6 @@ const Footer = () => {
               href="https://www.linkedin.com/in/phuonganhlongxuyen/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-gray-300"
             >
               <img
                 src="/sm_icon/linkedin.png"
@@ -216,6 +221,34 @@ const Footer = () => {
           Copyright 2025 © Phương Anh Long Xuyên
         </p>
       </div>
+
+      {/* Zalo Modal */}
+      {isZaloModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg shadow-xl w-80 p-6 relative">
+            <button
+              onClick={closeZaloModal}
+              className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
+            >
+              <X size={20} />
+            </button>
+            <h2 className="text-xl font-semibold mb-4 text-gray-800">
+              Liên hệ Zalo
+            </h2>
+            <p className="text-gray-700">
+              Số điện thoại: <span className="font-bold">0946-46-46-72</span>
+            </p>
+            <div className="mt-6 text-right">
+              <button
+                onClick={closeZaloModal}
+                className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+              >
+                Đóng
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </footer>
   );
 };
