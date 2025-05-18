@@ -12,6 +12,7 @@ import OrderSuccessPage from "./pages/OrderSuccessPage";
 import OrderDetailPage from "./pages/OrderDetailPage";
 import MyOrderPage from "./pages/MyOrderPage";
 import AdminLayout from "./Components/Admin/AdminLayout";
+import AdminHomePage from "./pages/AdminHomePage";
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
           <Route path="my-orders" element={<MyOrderPage />} />
         </Route>
         <Route path="/admin" element={<AdminLayout />}>
-          {/* Admin Layout */}
+          <Route index element={<AdminHomePage />} />
         </Route>
       </Routes>
     </>
