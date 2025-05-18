@@ -66,6 +66,12 @@ const Navbar = () => {
 
         {/* Right Icons */}
         <div className="flex items-center space-x-4">
+          <Link
+            to="/admin"
+            className="block bg-black px-2 text-sm text-white rounded"
+          >
+            Admin
+          </Link>
           <Link to="profile">
             <User className="size-6 text-gray-700 hover:text-black" />
           </Link>

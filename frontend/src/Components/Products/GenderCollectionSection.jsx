@@ -62,8 +62,8 @@ const GenderCollectionSection = () => {
               Sơn Thế Hệ Mới
             </h3>
             <p className="text-gray-600">
-              Dòng sơn mới mẻ, hiện đại với giá thành hợp lý, phù hợp cho các
-              công trình dân dụng và thương mại.
+              Dòng sơn mới mẻ, hiện đại với giá thành hợp lý, phù hợp cho tàu
+              biển và các công trình dân dụng.
             </p>
           </div>
         </div>
