@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { convertPrice } from "../utils";
-import { CheckCircle, Truck } from "lucide-react";
+import { ArrowLeftFromLine, CheckCircle, Truck } from "lucide-react";
 
 const OrderDetailPage = () => {
   const { id } = useParams();
@@ -187,9 +187,9 @@ const OrderDetailPage = () => {
         <div className="p-6 text-right">
           <Link
             to="/my-orders"
-            className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition"
+            className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-medium text-sm sm:text-base hover:bg-blue-700 transition"
           >
-            ← Quay về Đơn hàng của tôi
+            <ArrowLeftFromLine className="inline" /> Quay về Đơn hàng của tôi
           </Link>
         </div>
       </div>

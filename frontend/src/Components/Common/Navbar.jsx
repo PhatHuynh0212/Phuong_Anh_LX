@@ -25,7 +25,7 @@ const Navbar = () => {
             <img
               src="/logo/palx_logo_transparent.png"
               alt="PA logo"
-              className="h-[65px] w-[90px] object-cover"
+              className="h-[50px] w-[70px] sm:h-[65px] sm:w-[90px] object-cover"
             />
           </Link>
         </div>
