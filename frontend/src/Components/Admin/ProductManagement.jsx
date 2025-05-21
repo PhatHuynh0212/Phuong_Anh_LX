@@ -31,7 +31,7 @@ const ProductManagement = () => {
   return (
     <div className="max-w-7xl mx-auto p-6">
       <h2 className="text-3xl font-bold text-gray-800 mb-6">
-        Quản lý sản phẩm
+        🛢️ Quản lý sản phẩm
       </h2>
 
       <div className="overflow-x-auto bg-white rounded-xl shadow">

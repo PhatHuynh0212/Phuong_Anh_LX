@@ -60,7 +60,7 @@ const UserManagement = () => {
   return (
     <div className="max-w-7xl mx-auto p-6">
       <h2 className="text-3xl font-bold text-gray-800 mb-6">
-        Quản lý người dùng
+        👤 Quản lý người dùng
       </h2>
 
       {/* Form thêm người dùng */}
