@@ -67,10 +67,10 @@ function OrderManagement() {
                       }
                       className="w-full rounded-lg border-gray-300 bg-white p-2 text-sm shadow-sm focus:border-blue-500 focus:ring-blue-500"
                     >
-                      <option value="Processing">Processing</option>
-                      <option value="Shipped">Shipped</option>
-                      <option value="Delivered">Delivered</option>
-                      <option value="Cancelled">Cancelled</option>
+                      <option value="Processing">Đang xử lý</option>
+                      <option value="Shipped">Đang giao</option>
+                      <option value="Delivered">Đã giao</option>
+                      <option value="Cancelled">Hủy đơn</option>
                     </select>
                   </td>
                   <td className="px-6 py-4 flex flex-wrap gap-2">

@@ -7,6 +7,7 @@ import FilterSidebarJT from "../Components/Products/FilterSidebarJT";
 import ProductGrid from "../Components/Products/ProductGrid";
 import FilterSidebarNP from "../Components/Products/FilterSidebarNP";
 import FilterSidebarTHM from "../Components/Products/FilterSidebarTHM";
+import FilterSidebarINT from "../Components/Products/FilterSidebarINT";
 
 const CollectionPage = () => {
   const [searchParams] = useSearchParams();
@@ -26,6 +27,9 @@ const CollectionPage = () => {
       break;
     case "the-he-moi":
       SidebarComponent = FilterSidebarTHM;
+      break;
+    case "international":
+      SidebarComponent = FilterSidebarINT;
       break;
     default:
       SidebarComponent = null;
@@ -250,7 +254,7 @@ const CollectionPage = () => {
         {/* <SortOption /> */}
 
         {/* Product grid */}
-        <ProductGrid products={products} height={"210vh"} />
+        <ProductGrid products={products} />
       </div>
     </div>
   );
