@@ -9,42 +9,16 @@ import bang_mau_3 from "../../assets/color/haiau/mau-haiau-ngth.svg";
 
 const productFilters = [
   {
-    category: "Sơn tàu biển",
-    types: [
-      "Sơn Alkyd biến tính",
-      "Sơn Epoxy",
-      "Sơn cao su Clo hoá",
-      "Sơn chống hà",
-      "Sơn PU",
-    ],
-  },
-  {
-    category: "Sơn công nghiệp",
-    types: [
-      "Sơn Alkyd",
-      "Sơn Alkyd biến tính",
-      "Sơn bê tông",
-      "Sơn Epoxy",
-      "Sơn Acrylic",
-      "Sơn PU",
-    ],
-  },
-  {
-    category: "Sơn nước xây dựng",
-    types: [
-      "Sơn chống thấm",
-      "Sơn lót kháng kiềm",
-      "Sơn phủ nội thất",
-      "Sơn phủ ngoại thất",
-    ],
+    category: "Sơn hàng hải",
+    types: ["Sơn Alkyd", "Sơn Acrylic biến tính", "Sơn Epoxy", "Sơn PU"],
   },
   {
     category: "Sơn đặc biệt",
-    types: ["Sơn chịu nhiệt", "Sơn PU"],
+    types: ["Sơn cao su clo hoá", "Sơn chịu nhiệt", "Sơn chống hà", "Sơn lót"],
   },
   {
     category: "Dung môi pha sơn",
-    types: ["Epoxy", "Cao su clo hoá", "Alkyd", "PU"],
+    types: ["Alkyd", "Epoxy", "PU"],
   },
 ];
 

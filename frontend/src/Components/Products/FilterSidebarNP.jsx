@@ -6,16 +6,22 @@ import ReactDOM from "react-dom";
 
 const productFilters = [
   {
-    category: "Sơn trang trí",
-    types: ["Sơn nội thất", "Sơn ngoại thất"],
+    category: "Sơn hàng hải",
+    types: [
+      "Sơn 1 thành phần",
+      "Sơn kẻ vạch-dạ quang",
+      "Sơn Epoxy 2 thành phần",
+      "Sơn PU 2 thành phần",
+      "Sơn chống hà",
+    ],
   },
   {
-    category: "Sơn dân dụng",
-    types: ["Sơn lót", "Sơn phủ", "Sơn vạch đường"],
+    category: "Sơn lót",
+    types: ["Sơn lót bê tông"],
   },
   {
-    category: "Sơn và chất phủ công nghiệp",
-    types: ["Sơn lót", "Sơn giữa", "Sơn phủ", "Sơn chịu nhiệt"],
+    category: "Dung môi pha sơn",
+    types: ["Sơn chống hà", "Epoxy"],
   },
 ];
 const FilterSidebarNP = () => {

@@ -2,6 +2,15 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    container: {
+      screens: {
+        sm: "640px", // thay vì 640px
+        md: "768px", // thay vì 768px
+        lg: "1024px", // thay vì 1024px
+        xl: "1280px", // thay vì 1280px
+        "2xl": "1420px", // thay vì 1536px
+      },
+    },
     extend: {
       colors: {
         "pa-red": "#ea2e0e",

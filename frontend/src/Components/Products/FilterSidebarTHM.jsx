@@ -8,54 +8,8 @@ import bang_mau_2 from "../../assets/color/thehemoi/epoxy-thm.png";
 
 const productFilters = [
   {
-    category: "Sơn tàu thủy",
-    types: [
-      "Sơn Epoxy",
-      "Sơn Alkyd",
-      "Sơn Alkyd biến tính",
-      "Sơn chống hà",
-      "Sơn PU 1 thành phần",
-    ],
-  },
-  {
-    category: "Sơn công nghiệp",
-    types: [
-      "Sơn Epoxy",
-      "Sơn Alkyd",
-      "Sơn Alkyd biến tính",
-      "Sơn chịu nhiệt",
-      "Sơn PU 1 thành phần",
-      "Sơn PU 2 thành phần",
-    ],
-  },
-  {
-    category: "Sơn dân dụng",
-    types: [
-      "Sơn Epoxy",
-      "Sơn Alkyd",
-      "Sơn Alkyd biến tính",
-      "Sơn PU 1 thành phần",
-      "Sơn PU 2 thành phần",
-    ],
-  },
-  {
-    category: "Sơn chống cháy",
-    types: ["Sơn PU 2 thành phần"],
-  },
-  {
-    category: "Sơn xây dựng và giao thông",
-    types: ["Sơn Epoxy", "Sơn Alkyd biến tính"],
-  },
-  {
-    category: "Dung môi pha sơn",
-    types: [
-      "Epoxy",
-      "Alkyd",
-      "Alkyd biến tính",
-      "Chịu nhiệt",
-      "Chống hà",
-      "PU",
-    ],
+    category: "Sơn hàng hải",
+    types: ["Sơn Alkyd", "Sơn Epoxy", "Sơn PU 2 thành phần", "Sơn PU2K"],
   },
 ];
 
