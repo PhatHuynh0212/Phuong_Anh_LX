@@ -87,7 +87,7 @@ const ProductDetails = () => {
 
   const handleAddToCart = () => {
     if (!selectedSize) {
-      toast.error("Vui lòng chọn màu và kích cỡ.");
+      toast.error("Vui lòng chọn thể tích sản phẩm.");
       return;
     }
 

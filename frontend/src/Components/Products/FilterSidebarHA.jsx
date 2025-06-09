@@ -4,8 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import { toParamFormat } from "../../utils";
 import ReactDOM from "react-dom";
 import bang_mau_1 from "../../assets/color/haiau/mau-haiau-cn_tt.jpg";
-import bang_mau_2 from "../../assets/color/haiau/mau-haiau-noith.svg";
-import bang_mau_3 from "../../assets/color/haiau/mau-haiau-ngth.svg";
+import bang_mau_2 from "../../assets/color/haiau/mau-haiau-kem.jpg";
 
 const productFilters = [
   {
@@ -97,7 +96,7 @@ const FilterSidebar = () => {
                       : "text-gray-700 hover:bg-blue-50"
                   }`}
                 >
-                  Màu cơ bản sơn công nghiệp - tàu thuỷ
+                  Màu cơ bản sơn hàng hải
                 </p>
                 <p
                   onClick={() => setSelectedColor(2)}
@@ -107,30 +106,14 @@ const FilterSidebar = () => {
                       : "text-gray-700 hover:bg-blue-50"
                   }`}
                 >
-                  Màu cơ bản sơn nước nội thất
-                </p>
-                <p
-                  onClick={() => setSelectedColor(3)}
-                  className={`cursor-pointer px-3 py-2 rounded transition duration-200 ${
-                    selectedColor === 3
-                      ? "bg-blue-100 text-blue-600 font-bold"
-                      : "text-gray-700 hover:bg-blue-50"
-                  }`}
-                >
-                  Màu cơ bản sơn nước ngoại thất
+                  Màu sơn sắt mã kẽm - inox
                 </p>
               </div>
             </div>
             {/* Phần hiển thị hình ảnh bảng màu */}
             <div className="md:w-1/2 mt-6 md:mt-0">
               <img
-                src={
-                  selectedColor === 1
-                    ? bang_mau_1
-                    : selectedColor === 2
-                    ? bang_mau_2
-                    : bang_mau_3
-                }
+                src={selectedColor === 1 ? bang_mau_1 : bang_mau_2}
                 alt="Bảng màu"
                 className="w-full h-auto"
               />
