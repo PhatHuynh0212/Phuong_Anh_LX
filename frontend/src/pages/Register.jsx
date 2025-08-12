@@ -4,13 +4,14 @@ import { Link } from "react-router-dom";
 
 const Register = () => {
   const [name, setName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPass, setShowPass] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("User register:", { name, email, password });
+    console.log("User register:", { name, phoneNumber, email, password });
   };
 
   return (
@@ -27,13 +28,27 @@ const Register = () => {
           Nhập đầy đủ thông tin đăng ký
         </p>
         <div className="mb-4">
-          <label className="block text-sm font-semibold mb-2">Name *</label>
+          <label className="block text-sm font-semibold mb-2">Tên *</label>
           <input
             type="text"
             value={name}
             placeholder="Nhập tên của bạn..."
             onChange={(e) => {
               setName(e.target.value);
+            }}
+            className="w-full p-2 border rounded"
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-semibold mb-2">
+            Số điện thoại *
+          </label>
+          <input
+            type="text"
+            value={phoneNumber}
+            placeholder="Nhập số điện thoại..."
+            onChange={(e) => {
+              setPhoneNumber(e.target.value);
             }}
             className="w-full p-2 border rounded"
           />

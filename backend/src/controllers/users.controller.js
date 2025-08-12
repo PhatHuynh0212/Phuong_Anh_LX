@@ -28,7 +28,7 @@ export const register = async (req, res) => {
       payload,
       process.env.JWT_SECRET,
       {
-        expiresIn: "10d",
+        expiresIn: "60d",
       },
       (err, token) => {
         if (err) throw err;
@@ -80,7 +80,7 @@ export const login = async (req, res) => {
     jwt.sign(
       payload,
       process.env.JWT_SECRET,
-      { expiresIn: "10d" },
+      { expiresIn: "60d" },
       (err, token) => {
         if (err) throw err;
 
@@ -91,6 +91,7 @@ export const login = async (req, res) => {
             email: user.email,
             phoneNumber: user.phoneNumber,
             role: user.role,
+            point: user.point,
           },
           token,
         });

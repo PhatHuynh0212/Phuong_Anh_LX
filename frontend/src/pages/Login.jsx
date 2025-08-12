@@ -3,13 +3,13 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
+  const [account, setAccount] = useState("");
   const [password, setPassword] = useState("");
   const [showPass, setShowPass] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("User login:", { email, password });
+    console.log("User login:", { account, password });
   };
 
   return (
@@ -26,13 +26,15 @@ const Login = () => {
           Nhập tài khoản và mật khẩu để đăng nhập
         </p>
         <div className="mb-4">
-          <label className="block text-sm font-semibold mb-2">Email *</label>
+          <label className="block text-sm font-semibold mb-2">
+            Email / Sđt *
+          </label>
           <input
-            type="email"
-            value={email}
-            placeholder="Nhập địa chỉ email..."
+            type="text"
+            value={account}
+            placeholder="Nhập email hoặc sđt..."
             onChange={(e) => {
-              setEmail(e.target.value);
+              setAccount(e.target.value);
             }}
             className="w-full p-2 border rounded"
           />

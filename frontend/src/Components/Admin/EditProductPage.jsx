@@ -7,8 +7,9 @@ const EditProductPage = () => {
     pro_code: "",
     brand: "",
     category: "",
+    type: "",
     sizes: [],
-    desc: "",
+    description: "",
     features: [],
     color: "",
     images: [
@@ -68,6 +69,7 @@ const EditProductPage = () => {
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Basic Info */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Name */}
           <div>
             <label className="block font-semibold mb-2 text-gray-700">
               Tên sản phẩm
@@ -82,6 +84,7 @@ const EditProductPage = () => {
             />
           </div>
 
+          {/* Product code */}
           <div>
             <label className="block font-semibold mb-2 text-gray-700">
               Mã sản phẩm
@@ -96,6 +99,7 @@ const EditProductPage = () => {
             />
           </div>
 
+          {/* Brand */}
           <div>
             <label className="block font-semibold mb-2 text-gray-700">
               Thương hiệu
@@ -110,9 +114,10 @@ const EditProductPage = () => {
             />
           </div>
 
+          {/* Category */}
           <div>
             <label className="block font-semibold mb-2 text-gray-700">
-              Phân loại
+              Danh mục
             </label>
             <input
               type="text"
@@ -123,21 +128,36 @@ const EditProductPage = () => {
               required
             />
           </div>
-        </div>
 
-        {/* Color */}
-        <div>
-          <label className="block font-semibold mb-2 text-gray-700">
-            Màu sơn
-          </label>
-          <input
-            type="text"
-            name="color"
-            value={productData.color}
-            onChange={handleChange}
-            className="w-full border border-gray-300 rounded-xl p-3"
-            required
-          />
+          {/* Type */}
+          <div>
+            <label className="block font-semibold mb-2 text-gray-700">
+              Phân loại
+            </label>
+            <input
+              type="text"
+              name="type"
+              value={productData.type}
+              onChange={handleChange}
+              className="w-full border border-gray-300 rounded-xl p-3"
+              required
+            />
+          </div>
+
+          {/* Color */}
+          <div>
+            <label className="block font-semibold mb-2 text-gray-700">
+              Màu sơn
+            </label>
+            <input
+              type="text"
+              name="color"
+              value={productData.color}
+              onChange={handleChange}
+              className="w-full border border-gray-300 rounded-xl p-3"
+              required
+            />
+          </div>
         </div>
 
         {/* Sizes */}
@@ -166,8 +186,8 @@ const EditProductPage = () => {
             Mô tả
           </label>
           <textarea
-            name="desc"
-            value={productData.desc}
+            name="description"
+            value={productData.description}
             onChange={handleChange}
             rows={3}
             className="w-full border border-gray-300 rounded-xl p-3"
